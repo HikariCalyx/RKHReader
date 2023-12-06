@@ -23,4 +23,4 @@ A tool to read the root key hash from most Qualcomm signed binaries/dsp firmware
 * Add feature of comparing RKH between 2 ELF images
 
 # Why make a fork of this?
-Some OEMs don't provide a normal bootloader unlock method (especially the Triple-Color Company), so we have to discover the engineering sample unit with OEM retail signature and OEM Unlock command untouched from ABL partition. Since we bricked some units without acknowledging how it works on background, we have learned that RKH from ELF image extracted from engineering sample units must match retail unit.
+Some OEMs don't provide a normal bootloader unlock method (especially the Triple-Color Company), so we have to discover the engineering sample unit with OEM retail signature and OEM Unlock command untouched from ABL partition. We bricked some units without acknowledging how it works on background. After that, we have learned that RKH from ELF image extracted from engineering sample units must match retail unit.
