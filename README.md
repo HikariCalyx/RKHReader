@@ -5,7 +5,7 @@ A tool to read the root key hash from most Qualcomm signed binaries/dsp firmware
 1. Download and install .NET 6.0 Runtime based on your architecture here: https://dotnet.microsoft.com/download/dotnet/6.0
 2. [Download the build from Releases](https://github.com/HikariCalyx/RKHReader/releases/latest) page.
 3. Open a command prompt at where you extracted the RKHReader.
-4. Execute this command to check the Qualcomm ELF image (e.g. aboot, abl, xbl, xbl_config, tz, rpm, keymaster) you obtained from wherever you extracted:
+4. Execute this command to check the Qualcomm ELF image (e.g. aboot, abl, xbl, xbl_config, tz, rpm, keymaster, firehose programmer) you obtained from wherever you extracted:
    ```
    rkhreader path\to\the\bsp\image\you\extracted\such\as\abl.elf
    ```
@@ -21,3 +21,6 @@ A tool to read the root key hash from most Qualcomm signed binaries/dsp firmware
 # TODO
 * Add dry output parameter for script optimization
 * Add feature of comparing RKH between 2 ELF images
+
+# Why make a fork of this?
+Some OEMs don't provide a normal bootloader unlock method (especially the Triple-Color Company), so we have to discover the prototype unit with OEM retail signature and OEM Unlock command untouched from ABL partition.
