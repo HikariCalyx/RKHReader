@@ -32,6 +32,10 @@
                 {
                     Console.WriteLine(file);
                     Console.WriteLine("RKH: " + Converter.ConvertHexToString(qualcommPartition.RootKeyHash, ""));
+                    if (Converter.ConvertHexToString(qualcommPartition.RootKeyHash, "") == "959B8D0549EF41BEFABC24F51EFE84FEE366AC169AB04A0DB30C799B324FD798")
+                    {
+                        Console.WriteLine("WARNING: This image has Qualcomm Generic Test Signature! ");
+                    }
                 }
                 else
                 {
