@@ -14,7 +14,7 @@ A tool to read the root key hash from most Qualcomm signed binaries/dsp firmware
    path\to\the\bsp\image\you\extracted\such\as\abl.elf
    RKH: 1030CD12CE708F29D6914D7529DF75149D8EF91C27DAF0E1F84B90F4B707329A
    ```
-7. You can check another ELF image from a different build. Let's say we examined RKH extracted from an enginnering sample, then we also examined RKH from the retail build of that unit. If RKH between these 2 builds are identical, then enginnering sample ELF images are compatible with retail unit and will not hard brick your secure boot enabled retail unit. Otherwise it will hard brick your retail unit at 900E state.
+7. You can check another ELF image from a different build. Let's say we examined RKH inside of an ELF image extracted from an enginnering sample, then we also examined RKH from the retail build of that unit. If RKH between these 2 builds are identical, then enginnering sample ELF images are compatible with retail unit and will not hard brick your secure boot enabled retail unit. Otherwise it will hard brick your retail unit at 900E state.
 8. Comparing to original build from WOA-Project, this fork added following feature(s):
   * Detect if BSD image contains Qualcomm Generic Test Signature, which has a fixed RKH value: ```959B8D0549EF41BEFABC24F51EFE84FEE366AC169AB04A0DB30C799B324FD798``` If the ELF image has that RKH value, RKHReader will warn you.
 
